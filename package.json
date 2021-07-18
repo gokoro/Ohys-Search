@@ -1,0 +1,13 @@
+{
+  "name": "ohys-search",
+  "private": true,
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.19.1",
+    "mongoose": "^5.13.3",
+    "sonic-channel": "^1.2.6"
+  }
+}
