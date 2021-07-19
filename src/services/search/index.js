@@ -15,13 +15,9 @@ const controller = async (title) => {
     text: title,
   })
 
-  const animeList = []
+  const animeList = searchedList.map(async (id) => await search.find(id))
 
-  for await (const animeId of searchedList) {
-    animeList.push(await search.find(animeId))
-  }
-
-  return animeList
+  return Promise.all(animeList)
 }
 
 module.exports = controller
