@@ -1,3 +1,7 @@
-const fastify = require('fastify')
+const Fastify = require('fastify').default
+const fastify = Fastify()
+const fastifyCors = require('fastify-cors')
 
-module.exports = fastify({ logger: true })
+fastify.register(fastifyCors)
+
+module.exports = fastify

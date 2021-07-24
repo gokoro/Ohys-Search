@@ -7,6 +7,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.19.1",
+    "fastify-cors": "^6.0.2",
     "mongoose": "^5.13.3",
     "sonic-channel": "^1.2.6"
   }
