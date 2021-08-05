@@ -1,4 +1,3 @@
-const sonic = require('../../lib/sonic')
 const Search = require('./Search')
 const AnimeModel = require('../../models/Animes')
 
@@ -9,15 +8,7 @@ const controller = async (title) => {
     return []
   }
 
-  const searchedList = await sonic.search({
-    collection: 'anime',
-    bucket: 'default',
-    text: title,
-  })
-
-  const animeList = searchedList.map(async (id) => await search.find(id))
-
-  return Promise.all(animeList)
+  return await search.find(title)
 }
 
 module.exports = controller
