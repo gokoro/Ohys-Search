@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
-const config = require('../config')
+import mongoose from 'mongoose'
+import config from '../config/index.js'
 
-module.exports.connect = async () => {
+export const connect = async () => {
   return await mongoose.connect(config.databaseURL, {
     useNewUrlParser: true,
     bufferCommands: false,
@@ -10,6 +10,6 @@ module.exports.connect = async () => {
   })
 }
 
-module.exports.close = async () => {
+export const close = async () => {
   return await mongoose.connection.close()
 }

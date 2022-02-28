@@ -1,7 +1,7 @@
-const search = require('./search')
-const suggest = require('./suggest')
+import * as search from './search/index.js'
+import * as suggest from './suggest/index.js'
 
-module.exports = () => {
-  search()
-  suggest()
+export {
+  search,
+  suggest
 }

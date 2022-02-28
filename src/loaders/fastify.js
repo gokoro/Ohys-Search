@@ -1,7 +1,8 @@
-const Fastify = require('fastify').default
-const fastify = Fastify()
-const fastifyCors = require('fastify-cors')
+import fastifyFactory from 'fastify'
+import fastifyCors from 'fastify-cors'
+
+const fastify = fastifyFactory()
 
 fastify.register(fastifyCors)
 
-module.exports = fastify
+export default fastify

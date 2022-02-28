@@ -1,5 +1,5 @@
-const { Search, Ingest } = require('sonic-channel')
-const config = require('../config')
+import { Search, Ingest } from 'sonic-channel'
+import config from '../config/index.js'
 
 let sonicSearchClient = null
 let sonicIngestClient = null
@@ -18,5 +18,5 @@ const getIngestConnection = () => {
   return sonicIngestClient
 }
 
-module.exports.search = getSearchConnection()
-module.exports.ingest = getIngestConnection()
+export const search = getSearchConnection()
+export const ingest = getIngestConnection()

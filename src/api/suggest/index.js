@@ -1,7 +1,7 @@
-const fastify = require('../../loaders/fastify')
-const SuggestController = require('../../services/suggest')
+import fastify from '../../loaders/fastify.js'
+import SuggestController from '../../services/suggest/index.js'
 
-module.exports = () => {
+export default () => {
   const schema = {
     querystring: {
       keyword: { type: 'string' },

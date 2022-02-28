@@ -1,7 +1,7 @@
-const mongooseLoader = require('./mongoose')
+import * as mongooseLoader from './mongoose.js'
 
 const loaders = async () => {
   await mongooseLoader.connect()
 }
 
-module.exports = loaders
+export default loaders

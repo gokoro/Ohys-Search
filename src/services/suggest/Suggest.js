@@ -1,4 +1,4 @@
-const sonic = require('../../lib/sonic')
+import * as sonic from '../../lib/sonic/index.js'
 
 class Suggest {
   async find(text) {
@@ -12,4 +12,4 @@ class Suggest {
   }
 }
 
-module.exports = Suggest
+export default Suggest
