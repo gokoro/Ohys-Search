@@ -1,9 +1,9 @@
-import fastify from './loaders/fastify.js'
+import * as Instance from './loaders/fastify.js'
 import loader from './loaders/index.js'
-import api from './api/index.js'
+
+const fastify = Instance.get()
 
 const start = async () => {
-  api()
   await loader()
 
   try {
