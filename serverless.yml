@@ -6,9 +6,10 @@ provider:
   runtime: nodejs14.x
 
 functions:
-  hello:
-    handler: handler.hello
+  app:
+    handler: src/serverless.handler
     events:
+      - httpApi: '*'
       - httpApi:
-          path: /
-          method: get
+          path: /{any+}
+          method: '*'
