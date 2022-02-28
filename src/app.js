@@ -1,6 +1,6 @@
-const fastify = require('./loaders/fastify')
-const loader = require('./loaders')
-const api = require('./api')
+import fastify from './loaders/fastify.js'
+import loader from './loaders/index.js'
+import * as api from './api/index.js'
 
 const start = async () => {
   api()

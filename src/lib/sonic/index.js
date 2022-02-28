@@ -1,3 +1,9 @@
-module.exports.search = require('./search')
-module.exports.insert = require('./insert')
-module.exports.suggest = require('./suggest')
+import search from './search.js'
+import insert from './insert.js'
+import suggest from './suggest.js'
+
+export {
+  search,
+  insert,
+  suggest
+}

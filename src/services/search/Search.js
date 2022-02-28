@@ -1,4 +1,4 @@
-const sonic = require('../../lib/sonic')
+import * as sonic from '../../lib/sonic/index.js'
 
 class Search {
   constructor(Model) {
@@ -21,4 +21,4 @@ class Search {
   }
 }
 
-module.exports = Search
+export default Search

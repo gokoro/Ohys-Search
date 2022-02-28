@@ -1,5 +1,5 @@
-const Search = require('./Search')
-const AnimeModel = require('../../models/Animes')
+import Search from './Search.js'
+import AnimeModel from '../../models/Animes.js'
 
 const controller = async (title) => {
   const search = new Search(AnimeModel)
@@ -11,4 +11,4 @@ const controller = async (title) => {
   return await search.find(title)
 }
 
-module.exports = controller
+export default controller

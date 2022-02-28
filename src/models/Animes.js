@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const itemsSchema = new mongoose.Schema({
   episode: Number,
@@ -41,4 +41,5 @@ const animeSchema = new mongoose.Schema({
 })
 
 global.Anime = global.Anime || mongoose.model('Anime', animeSchema)
-module.exports = global.Anime
+
+export default global.Anime

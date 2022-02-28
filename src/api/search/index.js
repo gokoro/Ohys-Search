@@ -1,7 +1,7 @@
-const fastify = require('../../loaders/fastify')
-const SearchController = require('../../services/search')
+import fastify from '../../loaders/fastify.js'
+import SearchController from '../../services/search/index.js'
 
-module.exports = () => {
+export default () => {
   const schema = {
     querystring: {
       title: { type: 'string' },

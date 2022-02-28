@@ -1,5 +1,5 @@
-const Suggest = require('./Suggest')
-const AnimeModel = require('../../models/Animes')
+import Suggest from './Suggest.js'
+import AnimeModel from '../../models/Animes.js'
 
 const Controller = async (text) => {
   const suggest = new Suggest(AnimeModel)
@@ -11,4 +11,4 @@ const Controller = async (text) => {
   return await suggest.find(text)
 }
 
-module.exports = Controller
+export default Controller

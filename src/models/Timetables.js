@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const timetableSchema = new mongoose.Schema(
   {
@@ -16,4 +16,5 @@ const timetableSchema = new mongoose.Schema(
 
 global.Timetable =
   global.Timetable || mongoose.model('Timetable', timetableSchema)
-module.exports = global.Timetable
+
+export default global.Timetable

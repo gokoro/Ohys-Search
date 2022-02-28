@@ -1,7 +1,7 @@
-const sonic = require('../../loaders/sonic')
+import * as sonic from '../../loaders/sonic.js'
 
 const search = async ({ collection, bucket, text }) => {
   return await sonic.search.query(collection, bucket, text)
 }
 
-module.exports = search
+export default search
