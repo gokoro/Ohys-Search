@@ -1,6 +1,6 @@
 import fastify from './loaders/fastify.js'
 import loader from './loaders/index.js'
-import api from './api/index.js'
+import api from './fastify-api/index.js'
 
 const start = async () => {
   api()
