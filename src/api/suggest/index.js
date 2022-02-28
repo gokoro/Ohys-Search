@@ -1,7 +1,6 @@
-import fastify from '../../loaders/fastify.js'
 import SuggestController from '../../services/suggest/index.js'
 
-export default () => {
+export default (instance) => {
   const schema = {
     querystring: {
       keyword: { type: 'string' },
@@ -16,5 +15,5 @@ export default () => {
     rep.send({ data })
   }
 
-  fastify.get('/suggest', { schema }, handler)
+  instance.get('/suggest', { schema }, handler)
 }

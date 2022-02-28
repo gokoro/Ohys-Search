@@ -1,8 +1,13 @@
 import fastifyFactory from 'fastify'
 import fastifyCors from 'fastify-cors'
+import route from '../api/index.js'
 
-const fastify = fastifyFactory()
+export const get = () => {
+  const fastify = fastifyFactory()
 
-fastify.register(fastifyCors)
+  fastify.register(fastifyCors)
 
-export default fastify
+  route(fastify)
+
+  return fastify
+}

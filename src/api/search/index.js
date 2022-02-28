@@ -1,7 +1,6 @@
-import fastify from '../../loaders/fastify.js'
 import SearchController from '../../services/search/index.js'
 
-export default () => {
+export default (instance) => {
   const schema = {
     querystring: {
       title: { type: 'string' },
@@ -16,5 +15,5 @@ export default () => {
     rep.send({ data })
   }
 
-  fastify.get('/search', { schema }, handler)
+  instance.get('/search', { schema }, handler)
 }
