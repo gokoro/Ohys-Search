@@ -1,7 +1,7 @@
-import * as search from './search/index.js'
-import * as suggest from './suggest/index.js'
+import search from './search/index.js'
+import suggest from './suggest/index.js'
 
-export {
-  search,
-  suggest
+export default () => {
+  search()
+  suggest()
 }
