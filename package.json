@@ -10,5 +10,9 @@
     "fastify-cors": "^6.0.2",
     "mongoose": "^5.13.3",
     "sonic-channel": "^1.2.6"
+  },
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "esbuild": "^0.14.23"
   }
 }
