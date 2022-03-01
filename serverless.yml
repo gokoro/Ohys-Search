@@ -11,32 +11,24 @@ functions:
     handler: src/serverless.handler
     events:
       - httpApi: '*'
-      # - httpApi:
-      #     path: /{any+}
-      #     method: '*'
 
 plugins:
-  # - serverless-esbuild
+  - serverless-esbuild
   - serverless-offline
-  - serverless-webpack
+  # - serverless-webpack
 
 custom:
-  # esbuild:
-  #   packager: yarn
-  #   bundle: true
-  #   minify: true
-  #   plugins: scripts/esbuild-plugins.cjs
-  #   # platform: neutral
-  #   platform: node
-  #   format: esm
-  #   target: node14.14
-  #   outExtension:
-  #     .js: .mjs
-  webpack:
-    webpackConfig: 'webpack.config.cjs'
-    packager: 'yarn'
-    includeModules: true
-    packagerOptions:
-      noInstall: true
+  esbuild:
+    packager: yarn
+    bundle: true
+    minify: true
+    plugins: scripts/esbuild-plugins.cjs
+    platform: neutral
+    outExtension:
+      .js: .mjs
+  # webpack:
+  #   webpackConfig: 'webpack.config.cjs'
+  #   packager: 'yarn'
+  #   includeModules: true
 
 useDotenv: true
