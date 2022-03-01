@@ -1,12 +1,18 @@
 import awsLambdaFastify from 'aws-lambda-fastify'
 import * as Instance from './loaders/fastify.js'
-import * as Mongoose from './loaders/mongoose'
+import * as Mongoose from './loaders/mongoose.js'
 
 const app = Instance.get()
+const proxy = awsLambdaFastify(app)
 
-let connection
+let connection = null
 
-connection = connection ?? (await Mongoose.connect())
+export const handler = async (event, context) => {
+  if (connection === null) {
+    connection = await Mongoose.connect()
+  }
 
-export const handler = awsLambdaFastify(app)
-await app.ready()
+  await connection
+
+  return proxy(event, context)
+}
