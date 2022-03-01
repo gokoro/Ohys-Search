@@ -1,0 +1,35 @@
+service: ohys-search
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: ap-northeast-2
+
+functions:
+  app:
+    handler: src/serverless.handler
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+  # - serverless-webpack
+
+custom:
+  esbuild:
+    packager: yarn
+    bundle: true
+    minify: true
+    plugins: scripts/esbuild-plugins.cjs
+    platform: neutral
+    target: node14.14
+    outExtension:
+      .js: .mjs
+  # webpack:
+  #   webpackConfig: 'webpack.config.cjs'
+  #   packager: 'yarn'
+  #   includeModules: true
+
+useDotenv: true

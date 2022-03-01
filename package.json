@@ -3,19 +3,24 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "deploy:prod": "serverless deploy --stage production"
   },
   "dependencies": {
+    "aws-lambda-fastify": "^2.1.0",
     "dotenv": "^10.0.0",
     "fastify": "^3.19.1",
     "fastify-cors": "^6.0.2",
     "mongoose": "^5.13.3",
     "sonic-channel": "^1.2.6"
   },
-  "packageManager": "yarn@3.2.0",
   "devDependencies": {
-    "@yarnpkg/esbuild-plugin-pnp": "^2.0.1",
     "esbuild": "^0.14.23",
+    "esbuild-node-externals": "^1.4.1",
+    "serverless": "^3.5.0",
+    "serverless-esbuild": "^1.25.0",
+    "serverless-offline": "^8.5.0",
     "typescript": "^4.5.5"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
