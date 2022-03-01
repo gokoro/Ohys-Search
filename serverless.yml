@@ -24,6 +24,7 @@ custom:
     minify: true
     plugins: scripts/esbuild-plugins.cjs
     platform: neutral
+    target: node14.14
     outExtension:
       .js: .mjs
   # webpack:

@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "deploy:prod": "serverless deploy --stage production"
   },
   "dependencies": {
     "aws-lambda-fastify": "^2.1.0",
