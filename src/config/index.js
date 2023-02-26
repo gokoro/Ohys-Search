@@ -8,12 +8,6 @@ export default {
   databaseURL: process.env.DATABASE_URL || '',
   databaseName: process.env.DATABASE_NAME || '',
 
-  sonic: {
-    host: process.env.SONIC_HOST || '',
-    port: Number(process.env.SONIC_PORT) || 1491,
-    auth: process.env.SONIC_AUTH,
-  },
-
   meilisearch: {
     host: process.env.MEILISEARCH_HOST || '',
     key: process.env.MEILISEARCH_KEY || '',
