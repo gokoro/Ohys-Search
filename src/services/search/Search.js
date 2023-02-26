@@ -1,4 +1,4 @@
-import * as sonic from '../../lib/sonic/index.js'
+import * as meilisearch from '../../lib/meilisearch/index.js'
 
 class Search {
   constructor(Model) {
@@ -7,14 +7,10 @@ class Search {
   async find(title) {
     const Model = this.Model
 
-    const searchedList = await sonic.search({
-      collection: 'anime',
-      bucket: 'default',
-      text: title,
-    })
+    const searchedList = await meilisearch.search({ text: title })
 
-    const animeList = searchedList.map(
-      async (id) => await Model.findById(id).exec()
+    const animeList = searchedList.hits.map(
+      async ({ _id }) => await Model.findById(_id).exec()
     )
 
     return await Promise.all(animeList)

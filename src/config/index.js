@@ -13,4 +13,9 @@ export default {
     port: Number(process.env.SONIC_PORT) || 1491,
     auth: process.env.SONIC_AUTH,
   },
+
+  meilisearch: {
+    host: process.env.MEILISEARCH_HOST || '',
+    key: process.env.MEILISEARCH_KEY || '',
+  },
 }
