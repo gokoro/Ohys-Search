@@ -2,7 +2,7 @@ service: ohys-search
 
 provider:
   name: aws
-  runtime: nodejs18
+  runtime: nodejs18.x
   stage: dev
   region: ap-northeast-2
 
@@ -23,7 +23,7 @@ custom:
     minify: true
     plugins: scripts/esbuild-plugins.cjs
     platform: neutral
-    target: node14.14
+    target: node18
     outExtension:
       .js: .mjs
   # webpack:

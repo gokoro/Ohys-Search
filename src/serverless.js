@@ -1,4 +1,4 @@
-import awsLambdaFastify from 'aws-lambda-fastify'
+import awsLambdaFastify from '@fastify/aws-lambda'
 import * as Instance from './loaders/fastify.js'
 import * as Mongoose from './loaders/mongoose.js'
 
