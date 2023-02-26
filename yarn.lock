@@ -4321,11 +4321,6 @@ sonic-boom@^1.0.2:
     atomic-sleep "^1.0.0"
     flatstr "^1.0.12"
 
-sonic-channel@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/sonic-channel/-/sonic-channel-1.2.6.tgz#b8ae761eeaa5a3854f073f0865309103d2eefb52"
-  integrity sha512-vJaC27/bYvd2v2ZKx6njHoQGxoLOHLjXHc7XF+3BAyNSULJ/A1lYyJkCdVgskvpIfpX5khpsg0aWAT4sORppSA==
-
 sort-keys-length@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sort-keys-length/-/sort-keys-length-1.0.1.tgz#9cb6f4f4e9e48155a6aa0671edd336ff1479a188"
